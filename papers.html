@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Kerty Mirzani! ❤️</title>
+  <link rel="shortcut icon" href="./assets/gift.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Homemade+Apple&display=swap">
+  <link rel="stylesheet" href="./css/papers.css">
+</head>
+<body>
+
+  <div class="paper heart"></div>
+
+  <div class="paper image">
+    <p>You're the sweetest</p>
+    <p>You're the sweetest 😍</p>
+    <img src="assets/images/1.jpg" />
+  </div>
+
+  <div class="paper image">
+    <p>You're the sweetest</p>
+    <img src="assets/images/2.jpg" />
+  </div>
+
+  <div class="paper image">
+    <p>Want your love in</p>
+    <p>every flavor ❤️</p>
+    <img src="assets/images/3.jpg" />
+  </div>
+
+  <div class="paper red">
+    <p class="p1">You're the sweetest soul</p>
+    <p class="p2">I could wish for 😍</p>
+  </div>
+
+  <div class="paper">
+    <p class="p1">You're the prettiest</p>
+    <p class="p1">
+      girl in the world <span style="color: red !important;">❤️</span>
+    </p>
+  </div>
+
+  <div class="paper">
+    <p class="p1">Drag the papers to move!</p>
+  </div>
+
+  <button class="love-btn" onclick="openPopup()">💌 Open Surprise</button>
+  <div class="popup" id="popup">
+    <h2>For You ❤️</h2>
+    <img src="assets/qr.jpg" class="popup-img">
+    <p>Hi Kerty Mirzani!</p>
+    <p>Thankk youu so muchh for make my world brighter every single day, and let's scan the QR Code! ✨</p>
+    <button class="popup-btn" onclick="closePopup()">Close</button>
+  </div>
+
+  <!-- partial -->
+  <audio id="bg-music" src="assets/sound.mp3" autoplay loop></audio>
+  <script src="./js/papers.js"></script>
+  <script>
+    function openPopup() {
+      document.getElementById('popup').classList.add('active');
+    }
+    function closePopup() {
+      document.getElementById('popup').classList.remove('active');
+    }
+
+    window.addEventListener("load", () => {
+      const music = document.getElementById("bg-music");
+      music.play().catch(() => {
+        document.body.addEventListener("click", () => music.play(), { once: true });
+      });
+    });
+  </script>
+
+</body>
+</html>
