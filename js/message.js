@@ -20,6 +20,6 @@ onload = () => {
     clearTimeout(c);
     setTimeout(() => {
       window.location.href = "papers.html";
-    }, 9000);
+    }, 8300);
   }, 1000);
 };
